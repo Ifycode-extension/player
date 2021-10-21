@@ -26,7 +26,7 @@ class Player {
         document.body.appendChild(div);
         //Style div container
         const styles = { width: `${width}px`, height: `${height}px`};
-        Object.assign(div.style, styles, { margin: '0 auto', border: '2px solid blue' });
+        Object.assign(div.style, styles, { margin: '0 auto' });
 
         //Create video element
         str = `
@@ -142,13 +142,13 @@ class Player {
 
 window.addEventListener('load', () => {
     //Instantiate Player
-    let player = new Player('divId', 400, 280);
+    let player = new Player('divId', 640, 480);
 
     //Player's API:
     player.load('https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4');
     //console.log(player.play()); //remove muted and hook it up to a button instead
     //console.log(player.pause()); //fix error here too
-    //console.log(player.resize(450, 300));
+    //console.log(player.resize(320, 240));
     //console.log(player.getHeight());
     //console.log(player.getWidth());
     //console.log(player.setAutoplay(true));
