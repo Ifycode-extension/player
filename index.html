@@ -5,17 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="./other/favicon.png">
+    <link rel="stylesheet" href="./player.css">
+    <link rel="stylesheet" href="./other/other.css">
 </head>
 <body>
+    <header>
+        <h1>Video player</h1>
+        <h3>Made by Obiagba Mary</h3>
+    </header>
+
+    <section class="more-content-sections">
+        <button class="load-more-content-buttons">Load more content</button>
+        <div class="content close">Content from other.js to reduce html file content. </div>
+    </section>
+
     <!--
-    <video controls width="300" height="300" playsinline loop muted autoplay>
-        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
-        Your browser doesn't support HTML5 video. Here is
- a <a href="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4">link to the video</a> instead.
-    </video>
-    <video src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4" controls width="300" height="300" playsinline loop muted autoplay></video>
+        video player from player.js file is created 
+        and added here. Replaces loading div in slow
+        browser (chrome).
     -->
+    <div class="loading">Loading video player...</div>
+
+    <!-- Fixed at bottom right of page -->
+    <div class="viewability" id="player-viewability">Loading...</div>
+
+    <!-- Directly under the video player -->
+    <section id="display-state">Playback display</section>
     
-    <script src="index.js"></script>
+
+
+    <!--
+        controls area
+    -->
+    <section id="api-demo-controls" class="api-demo-controls">
+        <h3>Player API controls (demo)</h3>
+        <p>Note: Please click the buttons for input fields tied to buttons, as enter key is not yet setup.</p>
+        <div>
+            <button id="toggle-play" class="api-button">Play</button>
+            <button id="toggle-mute" class="api-button">Mute</button>
+            <button id="auto-play" class="api-button">Autoplay</button>
+            <button id="full-screen" class="api-button">Full screen</button>
+        </div>
+        <div>
+            <label for="input-volume"></label>
+            <input type="number" name="input-volume" id="input-volume" placeholder="e.g. 8">
+            <button id="set-volume" class="api-button">Set volume</button>
+        </div>
+        <div>
+            <div>
+                <label for="input-url"></label>
+                <input type="text" name="input-url" id="input-url" placeholder="Enter video url">
+                <button id="load-url-button">Load url</button>
+            </div>
+            <p id="url-error" class="error"></p>
+        </div>
+        <div>
+            <div>
+                <label for="input-width">Width: </label>
+                <input type="number" name="input-width" id="input-width" placeholder="e.g. 320">
+                <label for="input-height">Height: </label>
+                <input type="number" name="input-height" id="input-height" placeholder="e.g. 240">
+            </div>
+            <button id="resize-player">Resize Player</button>
+            <p id="error" class="error"></p>
+        </div>
+        <div>
+            <button id="get-width" class="api-button">Get Width</button>
+            <span id="display-width"></span>
+        </div>
+        <div>
+            <button id="get-height" class="api-button">Get Height</button>
+            <span id="display-height"></span>
+        </div>
+        <div>
+            <button id="get-duration" class="api-button">Get Duration</button>
+            <span id="display-duration"></span>
+        </div>
+        <div>
+            <button id="get-volume" class="api-button">Get volume</button>
+            <span id="display-volume"></span>
+        </div>
+        <div>
+            <button id="get-mute" class="api-button">Get mute</button>
+            <span id="display-mute"></span>
+        </div>
+    </section>
+
+    <section class="more-content-sections">
+        <button class="load-more-content-buttons">Load more content</button>
+        <div class="content">Content from other.js to reduce html file content. </div>
+    </section>
+
+    <footer>JW player assignment</footer>
+
+    <script src="./player.js"></script>
+    <script src="./other/other.js"></script>
 </body>
 </html>

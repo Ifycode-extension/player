@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
+
+/* video player css */
+
+#divId {
+    margin: 20px auto 0 auto;
+}
+
+#display-state {
+    margin: 3px auto 0 auto;
+    text-align: right;
+    font-weight: bold;
+    color: blue;
+    
+    /**change with js**/
+    width: 320px;
+}
+
+video {
+    display: block;
+    object-fit: fill;
+}

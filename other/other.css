@@ -1,0 +1,150 @@
+:root {
+    --almost-black: #222222;
+    --margin: 20px auto;
+    --light-grey: #f0f0f0;
+}
+
+body, 
+html {
+    font-family: "Nunito Sans", sans-serif;
+    height: 100vh;
+}
+
+body > *:not(#divId, #display-state, #player-viewability) {
+    width: 320px;
+    max-width: 320px;
+    margin: var(--margin);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+h1, 
+h3 {
+    width: max-content;
+    margin: var(--margin);
+}
+
+input {
+    background: var(--light-grey);
+    border: 1px solid var(--almost-black);
+    padding: 5px 3px;
+    font-size: 0.9em;
+}
+input[type="number"] {
+    width: 80px;
+}
+
+footer {
+    text-align: center;
+    color: #909090;
+}
+
+.loading {
+    min-height: 240px;
+    max-width: 320px;
+    margin: var(--margin);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--almost-black);
+    color: white;
+}
+
+/* player viewability */
+.viewability {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#player-viewability {
+    z-index: 1000;
+    background: black;
+    color: white;
+    font-size: 1.1em;
+    padding: 5px 10px;
+}
+
+
+/* more content sections 
+
+.more-content-sections {
+   
+}
+
+*/
+
+.content {
+    padding: 10px;
+    background: var(--light-grey);
+    border-radius: 0 0 3px 3px;
+}
+
+
+/* API demo controls container element */
+.api-demo-controls {
+    width: 320px;
+    margin: var(--margin);
+    border: 1px solid #909090;
+}
+
+.api-demo-controls > * {
+    width: 95%;
+    margin: var(--margin);
+}
+
+/*
+section:nth-last-child(1) {
+    background: red;
+    margin: 0 0 20px 0;
+}
+*/
+
+
+
+/* buttons only */
+
+button {
+    cursor: pointer;
+    background: var(--almost-black);
+    color: white;
+    border-radius: 3px;
+}
+
+.load-more-content-buttons {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 1.05em;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.api-demo-controls button {
+    padding: 7px;
+    font-size: 0.9em;
+    min-width: 65px;
+}
+
+
+/* js helpers */
+
+.display-none {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+
+.error {
+    font-size: 0.8em;
+    color: red;
+    margin-top: 5px;
+}
